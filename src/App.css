@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card{
+   width: 35%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.spinner {
+    width: 100px;
+    height: 100px;
+    display: grid;
+    border: 4.5px solid #0000;
+    border-radius: 50%;
+    border-color: #dbdcef #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+ }
+ 
+ .spinner::before,
+ .spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+ }
+ 
+ .spinner::before {
+    border-color: #474bff #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+ }
+ 
+ .spinner::after {
+    margin: 8.9px;
+ }
+ 
+ @keyframes spinner-e04l1k {
+    100% {
+       transform: rotate(1turn);
+    }
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hamburger{
+   display: none;
 }
+ .display{
+   display: none;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .nodisplay{
 
-.App-link {
-  color: #61dafb;
-}
+   display: none;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+ @media screen and (max-width:1024px) {
+   .nav{
+      display: none;
+   }
+   .display{
+      display: initial;
+    }
+   .hamburger{
+      display: initial;
+   }
+   .logo{
+      font-size:2rem;
+   }
+
+ }
+
+ @media screen and (max-width:800px){
+   .card{
+      width: 80%;
+   }
+  
+ }
