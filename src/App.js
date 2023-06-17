@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes,HashRouter } from 'react-router-dom';
 import './App.css';
 import News from './Components/Newscard/News';
 import Navbar from './Components/Navbar';
@@ -11,7 +11,7 @@ function App() {
  
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
     <div>
           <Navbar/>
           
@@ -25,7 +25,7 @@ function App() {
             <Route path='/technology' element={<News category={"technology"}/>}></Route>
         </Routes>
     </div>
-    </BrowserRouter>
+    </HashRouter>
  
     </>
   );
