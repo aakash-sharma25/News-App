@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+body{
+   /* background-color:#0d020d ; */
+}
 .card{
    width: 35%;
 }

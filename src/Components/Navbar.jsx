@@ -20,7 +20,7 @@ const Navbar = () => {
     <div className=''>
 
     <div className={open ? "display absolute top-[80px]":"nodisplay"}>
-            <Dawer/>
+            <Dawer setopen={setopen}/>
         </div>
 
      
