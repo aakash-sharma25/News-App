@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import "../App.css"
 
 const Navitems = () => {
     
@@ -7,25 +8,41 @@ const Navitems = () => {
     <div>
          <ul className='flex gap-5 mr-5'>
           <li className=''>
-            <Link to='/' className=' bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-200 ease-out hover:ease-in'> General</Link>
+            <NavLink to='/'
+              activeClassName="active"
+             className=' bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-200 ease-out hover:ease-in'>
+              General
+              </NavLink>
           </li>
           <li>
-            <Link to='/sports' className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Sports</Link>
+            <NavLink to='/sports' 
+            activeClassName="active"
+            className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Sports</NavLink>
           </li>
           <li>
-            <Link to='/technology'className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Technology</Link>
+            <NavLink to='/technology'
+            activeClassName="active"
+            className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Technology</NavLink>
           </li>
           <li>
-            <Link to='/business'className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Business</Link>
+            <NavLink to='/business'
+            activeClassName="active"
+            className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Business</NavLink>
           </li>
           <li>
-            <Link to='/entertainment' className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Entertainment</Link>
+            <NavLink to='/entertainment' 
+            activeClassName="active"
+            className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Entertainment</NavLink>
           </li>
           <li>
-            <Link to='/health'className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Health</Link>
+            <NavLink to='/health'
+            activeClassName="active"
+            className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Health</NavLink>
           </li>
           <li>
-            <Link to='/science'className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Science</Link>
+            <NavLink to='/science'
+            activeClassName="active"
+            className='bg-blue-600 rounded-md p-2 hover:bg-blue-800 transition duration-150 ease-out hover:ease-in'> Science</NavLink>
           </li>
         </ul>
     </div>

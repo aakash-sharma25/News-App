@@ -1,17 +1,15 @@
 
-import { BrowserRouter, Route, Routes,HashRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import './App.css';
 import News from './Components/Newscard/News';
 import Navbar from './Components/Navbar';
-// import Dawer from './Components/Newscard/Dawer';
-// import { GiHamburgerMenu } from 'react-icons/gi';
-// import { useState } from 'react';
+
 
 function App() {
  
   return (
     <>
-    <HashRouter>
+    <BrowserRouter>
     <div>
           <Navbar/>
           
@@ -25,7 +23,7 @@ function App() {
             <Route path='/technology' element={<News category={"technology"}/>}></Route>
         </Routes>
     </div>
-    </HashRouter>
+    </BrowserRouter>
  
     </>
   );

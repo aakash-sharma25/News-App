@@ -6,6 +6,7 @@ const News = ({category}) => {
 
 
     const [article,setarticle ] = useState([]);
+    
     const [loading,setloading] = useState(false);
 
 
@@ -15,8 +16,8 @@ const News = ({category}) => {
         const data = await res.json();
         // console.log(data);
         setarticle(data.articles);
-        console.log("fetchnews");
-        console.log(data.articles);
+        // console.log("fetchnews");
+        // console.log(data.articles);
         setloading(false);
     }
 

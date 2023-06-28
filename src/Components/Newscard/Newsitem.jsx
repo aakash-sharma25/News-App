@@ -6,8 +6,9 @@ const Newsitem = ({article}) => {
     <div className=''>
         <div className='flex flex-wrap gap-x-20 gap-y-10 items-center justify-center '>
        { 
-                article.map( (element) => 
-                    <div className='flex flex-col p-3  card shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
+              article.length > 0 &&  article.map( (element,index) => 
+                    <div key={index}
+                    className='flex flex-col p-3  card shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
                        { 
                         element.urlToImage ? 
                         (<img src={element.urlToImage} alt='Not available' className='w-full image'/>)
